@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Thanks for downloading this theme!
 
 ## Other Useful Links
@@ -23,3 +24,6 @@ Alternatively, here's our top most trending and selling items:
 * [**Mega Discount**](https://themewagon.com/themes/mega-discount-bundle/) - A bundle of 26 HTML5 templates; best value for your money. 
 
 
+=======
+# meradriver_frontend
+>>>>>>> 27cf4ca866411a137e0aaaf655da9cd4302eb31e
