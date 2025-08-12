@@ -2025,11 +2025,11 @@ h1, h2, h3, h4, h5, h6 {
   } */
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
   #nav-menu-container {
     display: none;
   }
-}
+} */
 
 /* Nav Meu Styling */
 .nav-menu a {
@@ -2100,9 +2100,9 @@ h1, h2, h3, h4, h5, h6 {
   #mobile-nav-toggle {
     display: inline;
   }
-  #nav-menu-container {
+  /* #nav-menu-container {
     display: none;
-  }
+  } */
 }
 
 /* Mobile Nav Styling */
@@ -2217,14 +2217,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   .section-title p br {
     display: none;
   }
-
+body{
+  overflow-x: hidden;
+}
 }
 
 .p1-gradient-bg, .banner-area .overlay-bg, .sidebar .single-slidebar .cat-list li:hover, .callto-action-area, .single-price:hover .price-bottom, .single-service:hover, .submit-right, .submit-left, .contact-btns, .form-area .primary-btn {
   background-image:url(../img/app-bg.png);
   color: #FFFFFF;
   text-align: center;
-  /* padding: 50px 20px; */
+  padding: 50px 20px;
   margin-bottom: 50px;
 }
 
@@ -3120,7 +3122,7 @@ align-items: center;
 }
 
 .footer-area {
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: #222222;
 }
 
@@ -3364,7 +3366,8 @@ align-items: center;
 }
 
 .footer-bottom {
-  padding-top: 80px;
+  padding: 20px;
+    background: #100808;
 }
 
 .footer-text a, .footer-text i {
@@ -6695,7 +6698,7 @@ align-items: center;
 }
 .naukri-swiper-wdgt .logo-container .logo {
   width: 180px;
-  height: 181px;
+  height: 150px;
   margin-top: 44px;
 }
 .naukri-events-swiper .logo-container .logo {
@@ -8005,5 +8008,57 @@ align-items: center;
     height: 143px;
     padding: 20px 20px 0;
 }
+.single-rated{
+  margin-top: 10PX;
+}
 
+/* Default mobile menu hidden */
+@media (max-width: 768px) {
+.banner-area img {
+    width: 100%;
+    height: 250px;
+    filter: brightness(80%);
+}
+  .nav-buttons .nav-menu{
+   flex-direction: column;
+  }
+    #nav-menu-container,
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        /* position: absolute; */
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
+    #nav-menu-container.open,
+    .nav-buttons.open {
+        display: flex;
+    }
+
+    .mobile-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+        user-select: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .mobile-toggle {
+        display: none;
+    }
+    #nav-menu-container,
+    .nav-buttons {
+        display: flex !important;
+        position: static;
+        box-shadow: none;
+        flex-direction: row;
+    }
+}

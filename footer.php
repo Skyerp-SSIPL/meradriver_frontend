@@ -1,6 +1,21 @@
 <footer class="footer-area section-gap mt-5">
       <div class="container">
-         <div class="row">
+         <div class="row mb-5">
+             <div class="col-lg-3  col-md-12">
+               <div class="single-footer-widget">
+                  <h6>WHO WE ARE
+                  </h6>
+                  <ul class="footer-nav">
+                     <li><a href="#">Customer Support : <br>
+                           +919911138139 , +919266166866</a></li>
+                     <li><a href="#">Email :
+
+                           info@meradriver.com</a></li>
+                     <!-- <li><a href="#">Power Tools</a></li>
+                     <li><a href="#">Marketing Service</a></li> -->
+                  </ul>
+               </div>
+            </div>
             <div class="col-lg-3  col-md-12">
                <div class="single-footer-widget">
                   <h6>Company</h6>
@@ -28,21 +43,7 @@
                   </ul>
                </div>
             </div>
-            <div class="col-lg-3  col-md-12">
-               <div class="single-footer-widget">
-                  <h6>WHO WE ARE
-                  </h6>
-                  <ul class="footer-nav">
-                     <li><a href="#">Customer Support : <br>
-                           +919911138139 , +919266166866</a></li>
-                     <li><a href="#">Email :
-
-                           info@meradriver.com</a></li>
-                     <!-- <li><a href="#">Power Tools</a></li>
-                     <li><a href="#">Marketing Service</a></li> -->
-                  </ul>
-               </div>
-            </div>
+           
 
             <div class="col-lg-3  col-md-12">
                <div class="single-footer-widget mail-chimp">

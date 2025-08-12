@@ -327,7 +327,7 @@
    <!-- top-companies -->
    <!-- features companies -->
    <section>
-      <div class="features-companies-title mt-5">
+      <div class="features-companies-title mt-3">
          <div class="container">
             <div id="mainSection.branding-premium" data-inventory-name="branding-premium" data-inventory-index="4">
                <div id="mainSection.branding-premium.ni-desktop-homepage-v2_mainSection_branding-premium.v0"
@@ -1838,7 +1838,7 @@
   
 
    <section>
-  <div class="faq-container container mt-5 text-center col-lg-9">
+  <div class="faq-container container mt-3 text-center col-lg-9">
     <h1>Frequently Asked Questions</h1>
 
     <div class="faq-item">

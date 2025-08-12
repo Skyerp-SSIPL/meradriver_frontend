@@ -38,26 +38,32 @@
     <header id="header" id="home">
         <div class="container">
             <div class="row align-items-center justify-content-between d-flex">
-                <!-- <div class=" align-items-center justify-content-between d-flex"> -->
                 <div id="logo">
                     <a href="index.php"><img src="img/pages/stock-photo (2).png" alt="" title="" /></a>
                 </div>
+
+                <!-- Mobile toggle icon -->
+                <div class="mobile-toggle" id="mobile-toggle">&#9776;</div>
+
+                <!-- Navigation menu -->
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="category.php">Job</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
+
+                <!-- Right buttons -->
                 <div class="nav-buttons">
                     <ul class="nav-menu">
                         <li><label for="toggle-login" class="ticker-btn-login" id="cta" style="cursor: pointer;">Driver</label></li>
-                        <li> <label for="toggle-login" class="ticker-btn-login  btn-thinker"><a class="text-white" href="#customerModal">Customer</a></label></li>
-                        <li><label for="toggle-login-otp" class="ticker-btn-login btn-thinker"><a class="text-white" href="#customerModalal">Login / Sign Up</a></label></li>
+                        <li><label class="ticker-btn-login btn-thinker"><a class="text-white" href="#customerModal">Customer</a></label></li>
+                        <li><label class="ticker-btn-login btn-thinker"><a class="text-white" href="#customerModalal">Login / Sign Up</a></label></li>
                     </ul>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
+
 
 
         <!-- login -->
@@ -72,7 +78,7 @@
                             <h4 class="mb-0">🚗 Driver Registration Form</h4>
                         </div>
                         <div class="card-body p-4">
-                            <form action="submit_driver.php" method="POST" >
+                            <form action="submit_driver.php" method="POST">
                                 <div class="mb-3 text-left">
                                     <label for="fullname" class="form-label text-black">Full Name</label>
                                     <input type="text" class="form-control form-control-lg" id="fullname" name="fullname" required placeholder="Enter your full name">
@@ -130,7 +136,7 @@
                     <label for="customerAddress" class="form-label">Address</label>
                     <textarea class="form-control" id="customerAddress" name="customerAddress" rows="3"></textarea>
 
-                    <button type="submit" class="btn-primary">Submit</button>
+                    <button type="submit" class="btn-primary mt-3">Submit</button>
                 </form>
             </div>
         </div>
@@ -148,7 +154,7 @@
                         <label class="form-label">OTP</label>
                         <input type="text" class="form-control" name="otp" pattern="[0-9]{4,6}" required placeholder="Enter OTP">
 
-                        <button type="submit" class="btn-primary">Verify & Login</button>
+                        <button type="submit" class="btn-primary mt-3">Verify & Login</button>
                     </form>
                 </div>
             </div>
@@ -157,8 +163,29 @@
 
 
 
-            <!-- Bootstrap Bundle JS -->
-            <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+        <!-- Bootstrap Bundle JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 
     </header>
-    
+    <script>
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu-container');
+        const navButtons = document.querySelector('.nav-buttons');
+
+        toggleBtn.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navButtons.classList.toggle('open', isOpen);
+            toggleBtn.innerHTML = isOpen ? '&times;' : '&#9776;'; // change icon
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) &&
+                !navButtons.contains(e.target) &&
+                !toggleBtn.contains(e.target)) {
+                navMenu.classList.remove('open');
+                navButtons.classList.remove('open');
+                toggleBtn.innerHTML = '&#9776;';
+            }
+        });
+    </script>
